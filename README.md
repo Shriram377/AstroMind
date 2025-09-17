@@ -40,8 +40,6 @@ It allows users to explore real-time space data, missions, images, and launch in
 2. JSON responses are rendered directly on the webpage (images, text, lists).
 3. Users can explore multiple agencies’ data without leaving the site.
 4. Future versions will allow search, filters, and chatbot Q&A.
-5. Integration with ESA’s open data & mission APIs to display live European space mission data.
-
    
 ## Future Improvements
 - Self-hosted star map (using D3 Celestial / Three.js)
@@ -49,3 +47,4 @@ It allows users to explore real-time space data, missions, images, and launch in
 - Chatbot with multilingual support.
 - Integrate satellite tracking & upcoming launches timeline.
 - Mobile-friendly UI & dark mode.
+- Integration with ESA’s open data & mission APIs to display live European space mission data.
