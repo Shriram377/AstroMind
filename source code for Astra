@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstroMind — Prototype</title>
+  <style>
+    :root {
+      --bg: #071029;
+      --panel: #0f1724;
+      --muted: #9fb3c7;
+      --accent: #7dd3fc;
+      --card: #071a2a;
+      --glass: rgba(255,255,255,0.03);
+      --success: #9df7b5;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--accent); }
+    .wrap { max-width:1200px; margin:18px auto; padding:16px; }
+    header { display:flex; gap:12px; align-items:center; }
+    h1 { margin:0; font-size:20px; }
+    .lead { margin:2px 0 0; color:var(--muted); font-size:13px; }
+
+    .layout { display:grid; grid-template-columns: 320px 1fr 380px; gap:14px; margin-top:16px; }
+    @media (max-width:1100px) { .layout { grid-template-columns: 1fr; } }
+
+    .panel { background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.03); }
+    .section-title { color:#e6f7ff; font-weight:700; margin:0 0 8px; }
+
+    /* Left sidebar (categories + controls) */
+    .sidebar { display:flex; flex-direction:column; gap:10px; }
+    .categories { display:flex; flex-direction:column; gap:6px; }
+    .cat-btn { padding:8px 10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.03); color:var(--muted); cursor:pointer; text-align:left; }
+    .cat-btn.active { background: rgba(125,211,252,0.08); color:var(--accent); border-color: rgba(125,211,252,0.12); }
+
+    /* Center main */
+    .main { display:flex; flex-direction:column; gap:12px; }
+    .card { padding:12px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); }
+    .apod-img { width:100%; border-radius:8px; margin-top:8px; }
+
+    /* ISRO lists */
+    .grid-two { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .list { max-height:180px; overflow:auto; padding:8px; border-radius:8px; background:var(--glass); border:1px solid rgba(255,255,255,0.02); color:var(--muted); }
+    .list-item { padding:6px 8px; border-bottom:1px dashed rgba(255,255,255,0.02); font-size:14px; }
+
+    /* Right chat column */
+    .chat-area { display:flex; flex-direction:column; height:72vh; min-height:420px; }
+    .chat-window { flex:1; padding:10px; overflow:auto; border-radius:8px; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); }
+    .msg { margin:8px 0; display:flex; }
+    .msg.user { justify-content:flex-end; }
+    .bubble { padding:10px 14px; border-radius:12px; background:#042f3a; color:#eaf9ff; max-width:78%; }
+    .bubble.user { background:#0b7b8b; }
+
+    .input-row { display:flex; gap:8px; margin-top:8px; }
+    input[type="text"] { flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--accent); }
+    button { padding:10px 14px; border-radius:8px; border:none; background:var(--accent); color:#042431; font-weight:700; cursor:pointer; }
+
+    /* Character */
+    .char-wrap { display:flex; align-items:center; gap:10px; }
+    .char { width:64px; height:64px; border-radius:50%; background: linear-gradient(180deg,#7dd3fc,#0b8ea0); display:flex; align-items:center; justify-content:center; font-weight:800; color:#042431; box-shadow:0 8px 22px rgba(0,0,0,0.4); transition: transform .25s ease; }
+    .char.bob { animation: bob 1s infinite; }
+    @keyframes bob { 0%{ transform: translateY(0) } 50%{ transform: translateY(-8px) } 100%{ transform: translateY(0) } }
+
+    /* Small helpers */
+    .small { font-size:13px; color:var(--muted); }
+    .hint { margin-top:6px; font-size:13px; color:var(--muted); }
+    .mini { font-size:12px; color:var(--muted); }
+    .search { display:flex; gap:8px; margin-bottom:8px; }
+    .result { margin-top:8px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>AstroMind — Prototype</h1>
+        <div class="lead">NASA APOD • ISRO data • Local knowledge base • Embedded star map • Chat & quiz</div>
+      </div>
+
+      <div style="margin-left:auto" class="char-wrap">
+        <div id="char" class="char">A</div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- LEFT: controls & categories -->
+      <div class="panel sidebar">
+        <div>
+          <div class="section-title">📚 Categories</div>
+          <div class="categories" id="categories"></div>
+        </div>
+
+        <div style="margin-top:8px">
+          <div class="section-title">🔎 Search</div>
+          <div class="search">
+            <input id="globalSearch" type="text" placeholder="Type question or keywords..." />
+            <button id="searchBtn">Search</button>
+          </div>
+          <div class="hint">Type any sentence. Keyword-matching returns the best static answer. Example: "Tell me about black holes"</div>
+        </div>
+
+        <div style="margin-top:10px">
+          <div class="section-title">🎯 Quick Actions</div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="randomQuizBtn" class="cat-btn">Random Quiz</button>
+            <button id="showAllBtn" class="cat-btn">Show All</button>
+          </div>
+          <div class="mini" style="margin-top:8px">Notes: For prototype, data is local JSON. Future: AI + live APIs via secure backend.</div>
+        </div>
+      </div>
+
+      <!-- CENTER: main content -->
+      <div class="panel main">
+        <!-- NASA APOD -->
+        <div class="card" id="apodCard">
+          <div class="section-title">🌌 NASA: Astronomy Picture of the Day</div>
+          <div id="apodArea" class="small">Loading APOD...</div>
+        </div>
+
+        <!-- ISRO Data -->
+        <div class="card">
+          <div class="section-title">🇮🇳 ISRO Data</div>
+          <div class="grid-two">
+            <div>
+              <h4 style="margin:6px 0;color:#cfefff">Launchers</h4>
+              <div id="launchers" class="list">Loading...</div>
+            </div>
+            <div>
+              <h4 style="margin:6px 0;color:#cfefff">Spacecrafts</h4>
+              <div id="spacecrafts" class="list">Loading...</div>
+            </div>
+            <div>
+              <h4 style="margin:6px 0;color:#cfefff">Customer Satellites</h4>
+              <div id="satellites" class="list">Loading...</div>
+            </div>
+            <div>
+              <h4 style="margin:6px 0;color:#cfefff">Centres</h4>
+              <div id="centres" class="list">Loading...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Star map -->
+        <div class="card">
+          <div class="section-title">🔭 Interactive Star Map</div>
+          <div class="small">Embedded interactive sky map (inside the site).</div>
+          <iframe class="card" style="height:380px;margin-top:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)" src="https://stellarium-web.org/" title="Star Map"></iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT: chat & results -->
+      <div class="panel chat-area">
+        <div class="section-title">🤖 Chat & Q/A</div>
+        <div id="chatWindow" class="chat-window"></div>
+
+        <div style="margin-top:8px; display:flex; gap:8px; align-items:center">
+          <input id="userInput" type="text" placeholder="Ask anything (e.g., 'What is a nebula?')" />
+          <button id="sendBtn">Send</button>
+        </div>
+
+        <div style="margin-top:8px">
+          <div class="section-title">Result</div>
+          <div id="resultArea" class="result">No query yet.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  /************************************************************
+   * CONFIG
+   * Replace NASA_API_KEY with your key. ISRO uses public endpoints.
+   * Ensure data.json (or your JSON filename) is in the same folder.
+   ************************************************************/
+  const NASA_API_KEY = "YOUR_NASA_KEY_HERE"; // <-- put your key here
+  const ISRO_BASE = "https://isro.vercel.app/api";
+  const DATA_JSON = "data.json"; // your final knowledge base file
+
+  // UI elements
+  const apodArea = document.getElementById('apodArea');
+  const launchersEl = document.getElementById('launchers');
+  const spacecraftsEl = document.getElementById('spacecrafts');
+  const satellitesEl = document.getElementById('satellites');
+  const centresEl = document.getElementById('centres');
+  const categoriesEl = document.getElementById('categories');
+  const chatWindow = document.getElementById('chatWindow');
+  const userInput = document.getElementById('userInput');
+  const sendBtn = document.getElementById('sendBtn');
+  const globalSearch = document.getElementById('globalSearch');
+  const searchBtn = document.getElementById('searchBtn');
+  const randomQuizBtn = document.getElementById('randomQuizBtn');
+  const showAllBtn = document.getElementById('showAllBtn');
+  const resultArea = document.getElementById('resultArea');
+  const char = document.getElementById('char');
+
+  // Data holders
+  let knowledge = {}; // object keyed by category -> array
+  let flatList = [];  // array of items with category, question, answer
+  let categories = []; // category names
+
+  // Basic helpers
+  function sleep(ms){ return new Promise(r => setTimeout(r, ms)); }
+  function esc(s){ return String(s||''); }
+  function addChat(msg, type='bot'){ const row = document.createElement('div'); row.className = 'msg ' + (type==='user'?'user':''); const b = document.createElement('div'); b.className = 'bubble ' + (type==='user'?'user':''); b.textContent = msg; row.appendChild(b); chatWindow.appendChild(row); chatWindow.scrollTop = chatWindow.scrollHeight; }
+
+  // Load local knowledge JSON
+  async function loadKnowledge(){
+    try {
+      const res = await fetch(DATA_JSON);
+      if(!res.ok) throw new Error('data.json not found or CORS blocked. Run via local server.');
+      const j = await res.json();
+      // Expecting either array of items or object keyed by category
+      if(Array.isArray(j)){
+        flatList = j.map(item => ({ category: item.category||'general', question: item.question||'', answer: item.answer||'', keywords: item.keywords||[] }));
+        // build categories map
+        knowledge = {};
+        flatList.forEach(it => {
+          if(!knowledge[it.category]) knowledge[it.category]=[];
+          knowledge[it.category].push(it);
+        });
+      } else {
+        // object keyed by category: { basic: [...], ... }
+        knowledge = j;
+        flatList = [];
+        for(const k of Object.keys(knowledge)){
+          const arr = knowledge[k];
+          arr.forEach(item => flatList.push({ category: k, question: item.question||'', answer: item.answer||'', keywords: item.keywords||[] }));
+        }
+      }
+      categories = Object.keys(knowledge);
+      renderCategories();
+    } catch (err) {
+      console.error('loadKnowledge error', err);
+      resultArea.textContent = 'Error loading knowledge base. Check data.json and run server.';
+    }
+  }
+
+  // Render categories in sidebar
+  function renderCategories(){
+    categoriesEl.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.className='cat-btn active';
+    allBtn.textContent = 'All';
+    allBtn.onclick = ()=> { document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); allBtn.classList.add('active'); renderList(flatList); };
+    categoriesEl.appendChild(allBtn);
+
+    categories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className='cat-btn';
+      btn.textContent = `${cat} (${knowledge[cat].length})`;
+      btn.onclick = ()=> {
+        document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        renderList(knowledge[cat]);
+      };
+      categoriesEl.appendChild(btn);
+    });
+
+    // default show all
+    renderList(flatList);
+  }
+
+  // Render list of entries to resultArea and small preview
+  function renderList(arr){
+    resultArea.innerHTML = '';
+    if(!arr || !arr.length){ resultArea.textContent = 'No items in this category.'; return; }
+    // show first 6 as preview
+    const preview = arr.slice(0, 40).map(it => `<div style="margin:6px 0;"><b style="color:#dff8ff">${esc(it.question)}</b><div style="color:var(--muted);font-size:13px;margin-top:4px">${esc(it.answer).slice(0,160)}${it.answer.length>160?'...':''}</div></div>`).join('');
+    resultArea.innerHTML = preview;
+  }
+
+  // Keyword matching: returns best match or null
+  function findBestMatch(query){
+    const q = String(query||'').toLowerCase().trim();
+    if(!q) return null;
+
+    // 1) direct exact question match
+    for(const it of flatList){
+      if(it.question && it.question.toLowerCase() === q) return it;
+    }
+
+    // 2) keyword-based: check keywords array if present
+    for(const it of flatList){
+      if(it.keywords && Array.isArray(it.keywords)){
+        for(const k of it.keywords){
+          if(q.includes(k.toLowerCase())) return it;
+        }
+      }
+    }
+
+    // 3) partial match on question text
+    let best = null; let bestScore = 0;
+    for(const it of flatList){
+      const qtext = (it.question||'').toLowerCase();
+      let score = 0;
+      // count common words
+      const words = q.split(/\W+/).filter(Boolean);
+      for(const w of words){
+        if(qtext.includes(w)) score += (w.length); // weight longer words
+      }
+      if(score > bestScore){ bestScore = score; best = it; }
+    }
+    // threshold
+    if(bestScore >= 3) return best;
+
+    // 4) fallback: search in answers too
+    for(const it of flatList){
+      if((it.answer||'').toLowerCase().includes(q)) return it;
+    }
+
+    return null;
+  }
+
+  // Chat send handler
+  async function handleSend(){
+    const txt = userInput.value.trim();
+    if(!txt) return;
+    addChat(txt, 'user');
+    userInput.value = '';
+    // show thinking
+    addChat('Thinking...', 'bot');
+    char.classList.add('bob');
+    await sleep(600);
+
+    // find a match in local knowledge
+    const match = findBestMatch(txt);
+    // remove last 'Thinking...' bubble
+    const last = chatWindow.querySelector('.msg:not(.user):last-child .bubble');
+    if(last && last.textContent === 'Thinking...') last.parentElement.remove();
+
+    if(match){
+      addChat(match.answer, 'bot');
+      renderList([match]); // show as result also
+    } else {
+      const fallback = "Sorry, I don't have that in my local knowledge base yet. Try simpler words or ask about 'APOD', 'ISS', 'star map', or 'black hole'.";
+      addChat(fallback, 'bot');
+      resultArea.textContent = fallback;
+    }
+    char.classList.remove('bob');
+  }
+
+  // Search button handler
+  searchBtn.addEventListener('click', ()=> {
+    const q = globalSearch.value.trim();
+    if(!q) return;
+    const m = findBestMatch(q);
+    if(m){ renderList([m]); resultArea.scrollIntoView({behavior:'smooth'}); addChat(`Search result: ${m.question}`, 'bot'); }
+    else { resultArea.textContent = 'No exact match found in local dataset.'; addChat('No exact match found.', 'bot'); }
+  });
+
+  // Send button + Enter
+  sendBtn.addEventListener('click', handleSend);
+  userInput.addEventListener('keypress', (e)=> { if(e.key==='Enter'){ handleSend(); } });
+
+  // Quick actions
+  randomQuizBtn.addEventListener('click', ()=> {
+    if(!flatList.length) return;
+    const r = flatList[Math.floor(Math.random()*flatList.length)];
+    addChat(`Quiz: ${r.question}`, 'bot');
+    renderList([r]);
+  });
+  showAllBtn.addEventListener('click', ()=> renderList(flatList));
+
+  /*********************** NASA APOD & ISRO fetch *************************/
+  async function loadAPOD(){
+    apodArea.textContent = 'Loading APOD...';
+    if(!NASA_API_KEY || NASA_API_KEY === "YOUR_NASA_KEY_HERE"){
+      apodArea.innerHTML = `<div class="small">No NASA API key set in the script. Put your API key in the file to see APOD.</div>`;
+      return;
+    }
+    try {
+      const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`);
+      const data = await res.json();
+      if(data && data.url){
+        apodArea.innerHTML = `<b style="color:#dff8ff">${esc(data.title)}</b>
+        <img class="apod-img" src="${data.url}" alt="${esc(data.title||'APOD')}" />
+        <div class="small" style="margin-top:6px">${esc(data.explanation).slice(0,380)}${data.explanation && data.explanation.length>380 ? '...' : ''}</div>
+        <div style="margin-top:6px"><a style="color:var(--accent)" href="${data.url}" target="_blank" rel="noopener">Open full image</a></div>`;
+      } else {
+        apodArea.textContent = 'APOD did not return an image.';
+      }
+    } catch (err) {
+      console.error('APOD error', err);
+      apodArea.textContent = 'Error loading APOD. Check API key and network.';
+    }
+  }
+
+  async function loadISRO(){
+    setInner(launchersEl, 'Loading...');
+    setInner(spacecraftsEl, 'Loading...');
+    setInner(satellitesEl, 'Loading...');
+    setInner(centresEl, 'Loading...');
+    try {
+      const [lRes, sRes, csRes, cRes] = await Promise.all([
+        fetch(`${ISRO_BASE}/launchers`),
+        fetch(`${ISRO_BASE}/spacecrafts`),
+        fetch(`${ISRO_BASE}/customer_satellites`),
+        fetch(`${ISRO_BASE}/centres`)
+      ]);
+      const ljson = await lRes.json();
+      const sjson = await sRes.json();
+      const satjson = await csRes.json();
+      const cenjson = await cRes.json();
+
+      renderISROList(launchersEl, ljson.launchers || ljson || []);
+      renderISROList(spacecraftsEl, sjson.spacecrafts || sjson || [], 'name');
+      renderISROList(satellitesEl, satjson.customer_satellites || satjson || [], 'id');
+      renderISROList(centresEl, cenjson.centres || cenjson || [], 'name','Place');
+    } catch (err) {
+      console.error('ISRO error', err);
+      setInner(launchersEl, 'Error fetching ISRO data (CORS may block direct browser calls). Use backend if blocked.');
+      setInner(spacecraftsEl, 'Error fetching ISRO data.');
+      setInner(satellitesEl, 'Error fetching ISRO data.');
+      setInner(centresEl, 'Error fetching ISRO data.');
+    }
+  }
+
+  function renderISROList(el, arr, primary='id', second=null){
+    if(!arr || !arr.length){ el.innerHTML = '<div class="list-item">No data</div>'; return; }
+    el.innerHTML = arr.map(it => {
+      const p = it[primary] || it.name || it.id || JSON.stringify(it);
+      const s = second ? (` — ${it[second]||''}`) : '';
+      return `<div class="list-item">${esc(p)}${esc(s)}</div>`;
+    }).join('');
+  }
+
+  function setInner(el, text){ el.innerHTML = `<div class="list-item">${esc(text)}</div>`; }
+
+  /*********************** Boot *************************/
+  (async function init(){
+    await loadKnowledge();
+    loadAPOD();
+    loadISRO();
+  })();
+
+  </script>
+</body>
+</html>
