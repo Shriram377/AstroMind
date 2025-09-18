@@ -1,0 +1,618 @@
+[
+  {
+    "category": "Basic Astronomical Facts",
+    "qna_pairs": [
+      {
+        "question": "What is our solar system composed of?",
+        "answer": "Our solar system has eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune."
+      },
+      {
+        "question": "What is the Sun?",
+        "answer": "The Sun is a star at the center of our solar system. All the planets orbit it due to its immense gravity."
+      },
+      {
+        "question": "How long does it take for light from the Sun to reach Earth?",
+        "answer": "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth."
+      },
+      {
+        "question": "Which is the hottest planet in our solar system?",
+        "answer": "Venus is the hottest planet in our solar system, with surface temperatures hot enough to melt lead."
+      },
+      {
+        "question": "How big is Jupiter?",
+        "answer": "Jupiter is the largest planet; it is so big that all the other planets in our solar system could fit inside it."
+      },
+      {
+        "question": "What are Saturn's rings made of?",
+        "answer": "Saturn's rings are made up of billions of pieces of ice, rock, and dust."
+      },
+      {
+        "question": "Why is Mars called the \"Red Planet\"?",
+        "answer": "Mars is known as the \"Red Planet\" because of the large amount of iron oxide (or rust) on its surface."
+      },
+      {
+        "question": "What is the name of our home galaxy?",
+        "answer": "The Milky Way is the name of our home galaxy, which contains our solar system."
+      },
+      {
+        "question": "What are galaxies?",
+        "answer": "Galaxies are huge collections of stars, gas, and dust held together by gravity."
+      },
+      {
+        "question": "What is a light-year?",
+        "answer": "A light-year is a unit of distance, not time. It's the distance that light travels in one year, which is about 9.46 trillion kilometers."
+      },
+      {
+        "question": "Why do stars appear to twinkle?",
+        "answer": "Stars appear to twinkle because their light passes through Earth's atmosphere, which bends and scatters the light."
+      },
+      {
+        "question": "Is the Moon a perfect sphere?",
+        "answer": "The Moon is not a perfect sphere; it's shaped more like an egg."
+      },
+      {
+        "question": "Is Earth's moon moving away from us?",
+        "answer": "Earth's moon is slowly moving away from us at a rate of about 3.8 centimeters per year."
+      },
+      {
+        "question": "What is unique about Uranus's rotation?",
+        "answer": "Uranus is unique because it rotates on its side, making it look like it's rolling through space."
+      },
+      {
+        "question": "How does a day on Mercury compare to its year?",
+        "answer": "A day on Mercury is longer than its year. It takes 59 Earth days to rotate once on its axis but only 88 Earth days to orbit the Sun."
+      },
+      {
+        "question": "Is there sound in space?",
+        "answer": "There is no sound in space because sound waves need a medium (like air or water) to travel through, and space is a vacuum."
+      },
+      {
+        "question": "What is a black hole?",
+        "answer": "Black holes are regions in space where gravity is so strong that nothing, not even light, can escape."
+      },
+      {
+        "question": "Is the universe expanding?",
+        "answer": "The universe is constantly expanding, with galaxies moving away from each other."
+      },
+      {
+        "question": "Where is our solar system located within the Milky Way?",
+        "answer": "Our solar system is located in one of the spiral arms of the Milky Way, called the Orion Arm."
+      },
+      {
+        "question": "What is a supernova?",
+        "answer": "A supernova is the incredibly powerful explosion of a dying star. These explosions create and spread the elements that make up planets and even our own bodies."
+      }
+    ]
+  },
+  {
+    "category": "Intermediate Concepts",
+    "qna_pairs": [
+      {
+        "question": "What is the Hertzsprung-Russell (H-R) Diagram?",
+        "answer": "The H-R Diagram is a fundamental scatter plot in astrophysics that graphs the absolute magnitude (or luminosity) of stars against their spectral type (or surface temperature). Stars are not randomly distributed on this plot; they form distinct groups, revealing key stages of stellar evolution."
+      },
+      {
+        "question": "What is Stellar Nucleosynthesis?",
+        "answer": "Stellar nucleosynthesis is the process by which stars produce new, heavier elements by fusing lighter atomic nuclei. In stars like our Sun, this is primarily the proton-proton chain that fuses hydrogen into helium. In more massive stars, the CNO cycle and later, the alpha process, create elements up to iron."
+      },
+      {
+        "question": "What is the Chandrasekhar Limit?",
+        "answer": "This is a critical threshold in stellar evolution, the maximum mass for a stable, non-rotating white dwarf star, approximately 1.4 times the mass of the Sun. If a white dwarf exceeds this mass, the electron degeneracy pressure can no longer support it against gravity, leading to a catastrophic Type Ia supernova."
+      },
+      {
+        "question": "What are the different types of supernovae?",
+        "answer": "A Type II supernova is the explosive death of a massive star (greater than 8 solar masses) that has run out of fuel. A Type Ia supernova, however, is the explosion of a white dwarf that has exceeded the Chandrasekhar Limit."
+      },
+      {
+        "question": "What are Neutron Stars and Pulsars?",
+        "answer": "A neutron star is the collapsed core of a massive star that has undergone a Type II supernova. A pulsar is a type of rapidly rotating neutron star that emits beams of electromagnetic radiation. We observe these as pulses when the beam sweeps across Earth."
+      },
+      {
+        "question": "What are Accretion Disks?",
+        "answer": "These are rotating structures of gas and dust that surround a central body, like a newly forming star, a white dwarf, a neutron star, or a black hole. The material spirals inward due to gravity while friction and tidal forces heat it, causing it to emit powerful radiation."
+      },
+      {
+        "question": "What are Quasars and Active Galactic Nuclei (AGN)?",
+        "answer": "A quasar is an extremely luminous and distant active galactic nucleus. They are powered by supermassive black holes at the centers of galaxies, which are actively accreting vast amounts of matter. The intense gravitational energy of the black hole is converted into light, making quasars some of the brightest objects in the universe."
+      },
+      {
+        "question": "What is Gravitational Lensing?",
+        "answer": "This phenomenon occurs when a massive object, like a galaxy or a cluster of galaxies, bends the light from a more distant object behind it. The gravity acts like a lens, distorting the image of the background object into arcs or multiple images."
+      },
+      {
+        "question": "What is the Cosmic Microwave Background (CMB)?",
+        "answer": "The CMB is a faint, uniform glow of microwave radiation that fills all of space. It is the oldest light in the universe, a fossil from about 380,000 years after the Big Bang, when the universe cooled enough for photons to travel freely for the first time."
+      },
+      {
+        "question": "What is the difference between Cosmological Redshift and Doppler Redshift?",
+        "answer": "Doppler redshift is caused by the motion of a source through space. Cosmological redshift, on the other hand, is caused by the expansion of space itself. As space expands, the wavelengths of light traveling through it are stretched, shifting the light toward the red end of the spectrum."
+      },
+      {
+        "question": "What are Dark Matter and Dark Energy?",
+        "answer": "Dark matter is a hypothetical form of matter that does not emit or interact with light. Its existence is inferred from its gravitational effects on galaxies. Dark energy is an even more mysterious force thought to be responsible for the accelerating expansion of the universe."
+      },
+      {
+        "question": "What is the difference between the Observable Universe and the Universe?",
+        "answer": "The observable universe is the portion of the universe that is accessible to us from Earth's position in spacetime, as the light from more distant objects has not had enough time to reach us. The entire universe is thought to be much larger, possibly infinite."
+      },
+      {
+        "question": "What is Inflationary Cosmology?",
+        "answer": "This theory proposes that in the first fraction of a second after the Big Bang, the universe underwent a period of exponential expansion, far faster than its current rate. Inflation helps to explain several puzzles of the Big Bang model."
+      },
+      {
+        "question": "What is the Habitable Zone?",
+        "answer": "Also known as the \"Goldilocks Zone,\" this is the region around a star where the temperature is just right for liquid water to exist on a planet's surface. A planet in this zone, with an atmosphere and other key conditions, could potentially support life."
+      },
+      {
+        "question": "What are some Exoplanet Detection Methods?",
+        "answer": "The two most common are the transit method (detecting a slight dip in a star's brightness as a planet passes in front of it) and the radial velocity method (detecting a star's tiny gravitational \"wobble\" caused by an orbiting planet)."
+      },
+      {
+        "question": "What is Escape Velocity?",
+        "answer": "This is the minimum speed needed for an object to escape the gravitational pull of a celestial body without any further propulsion. For Earth, this speed is about 11.2 km/s."
+      },
+      {
+        "question": "What is Tidal Locking?",
+        "answer": "This occurs when a celestial body's orbital period matches its rotational period, causing the same side of the body to always face its gravitational partner. Our Moon is tidally locked with Earth, which is why we only ever see one side of it."
+      },
+      {
+        "question": "What is the Fermi Paradox?",
+        "answer": "This is the apparent contradiction between the high probability of extraterrestrial civilizations existing and the lack of evidence for, or contact with, such civilizations. The paradox asks: \"Where is everybody?\""
+      },
+      {
+        "question": "What is the Great Attractor?",
+        "answer": "This is a vast, localized gravitational anomaly in intergalactic space at the center of the Laniakea Supercluster. It appears to be pulling our Milky Way and other galaxies toward it with immense gravitational force."
+      },
+      {
+        "question": "What is Orbital Resonance?",
+        "answer": "This occurs when two orbiting bodies exert a regular, periodic gravitational influence on each other, usually because their orbital periods are related by a ratio of small integers."
+      }
+    ]
+  },
+  {
+    "category": "Advanced Concepts",
+    "qna_pairs": [
+      {
+        "question": "What is the Standard Model of Cosmology (ΛCDM)?",
+        "answer": "This is the current prevailing model for the universe's evolution. It is based on two primary components: Lambda (Λ), representing dark energy, and Cold Dark Matter (CDM)."
+      },
+      {
+        "question": "What is Primordial Nucleosynthesis?",
+        "answer": "This is the process that occurred in the first few minutes after the Big Bang, where the universe was hot and dense enough for protons and neutrons to fuse, forming the first light atomic nuclei, primarily hydrogen and helium."
+      },
+      {
+        "question": "What is Inflation Theory?",
+        "answer": "This theory proposes that the universe underwent a period of exponential expansion in the first tiny fraction of a second after the Big Bang. This rapid expansion solves several problems with the standard Big Bang model."
+      },
+      {
+        "question": "What is the Reionization Epoch?",
+        "answer": "This period, which began a few hundred million years after the Big Bang, marks the end of the \"Cosmic Dark Ages.\" The first stars and quasars emitted intense ultraviolet radiation, stripping electrons from neutral hydrogen atoms and reionizing the interstellar medium."
+      },
+      {
+        "question": "What are Baryon Acoustic Oscillations (BAO)?",
+        "answer": "These are fossilized sound waves from the early universe that left imprints in the large-scale distribution of galaxies. By measuring their scale, astronomers can determine the expansion history of the universe with high precision."
+      },
+      {
+        "question": "What is the Hubble Tension?",
+        "answer": "This is a major discrepancy between the value of the universe's expansion rate (H0) measured from the local universe and its value as inferred from observations of the Cosmic Microwave Background from the early universe."
+      },
+      {
+        "question": "What is the Multiverse Hypothesis?",
+        "answer": "This is a speculative concept suggesting that our observable universe is just one of many different universes, possibly with different physical laws."
+      },
+      {
+        "question": "What are Cosmological Horizons?",
+        "answer": "In an expanding universe, the particle horizon defines the boundary of the observable universe, while the event horizon marks the boundary beyond which light will never be able to reach us in the future."
+      },
+      {
+        "question": "What is Hawking Radiation?",
+        "answer": "This theoretical phenomenon suggests that black holes are not completely \"black\" but can emit thermal radiation. It is a quantum mechanical effect at the event horizon, where particle-antiparticle pairs are created, and one particle escapes while the other falls in."
+      },
+      {
+        "question": "What is the No-Hair Theorem?",
+        "answer": "This theorem states that a stationary black hole can be completely described by only three externally observable properties: its mass, electric charge, and angular momentum."
+      },
+      {
+        "question": "What are the Kerr and Schwarzschild Metrics?",
+        "answer": "These are two solutions to Einstein's General Relativity that describe the geometry of spacetime around a black hole. The Schwarzschild metric describes a non-rotating, uncharged black hole, while the Kerr metric describes a rotating one."
+      },
+      {
+        "question": "What is the Triple-Alpha Process?",
+        "answer": "This is a crucial nuclear fusion reaction that occurs in the core of red giant stars. It fuses three helium nuclei (alpha particles) into a single carbon nucleus."
+      },
+      {
+        "question": "What are the s-process and r-process?",
+        "answer": "These are two distinct processes of stellar nucleosynthesis that create elements heavier than iron. The s-process (slow neutron capture) occurs in stars during their giant phase, while the r-process (rapid neutron capture) occurs during catastrophic events like supernovae."
+      },
+      {
+        "question": "What is Hydrostatic Equilibrium?",
+        "answer": "This is the perfect balance between the outward pressure generated by nuclear fusion in a star's core and the inward gravitational force. This equilibrium keeps a star stable."
+      },
+      {
+        "question": "What is the Morgan-Keenan system of Stellar Classifications?",
+        "answer": "This system is a method of classifying stars based on their spectral characteristics, which are strongly correlated with their surface temperature. The sequence is O, B, A, F, G, K, M, with O-type stars being the hottest."
+      },
+      {
+        "question": "What are Globular Clusters?",
+        "answer": "These are dense, spherical collections of thousands to millions of stars that are gravitationally bound. They are thought to be some of the oldest structures in the universe and provide clues about galactic formation."
+      },
+      {
+        "question": "What is the Tully-Fisher Relation?",
+        "answer": "An empirical relationship that correlates a spiral galaxy's rotational velocity with its total luminosity. It's a key tool for measuring cosmic distances."
+      },
+      {
+        "question": "What is the Faber-Jackson Relation?",
+        "answer": "A relationship for elliptical galaxies that connects a galaxy's luminosity to the velocity dispersion of its stars, providing a means to determine their distance."
+      },
+      {
+        "question": "What are Active Galactic Nuclei (AGN)?",
+        "answer": "A broad class of objects powered by a supermassive black hole at the center of a galaxy. They include quasars, blazars, and Seyfert galaxies."
+      },
+      {
+        "question": "What are Spiral Density Waves?",
+        "answer": "The beautiful spiral arms of spiral galaxies are not fixed stars. They are dynamic waves of enhanced density that rotate more slowly than the stars themselves. As stars and gas pass through these waves, they are compressed, triggering star formation."
+      },
+      {
+        "question": "What is the Sunyaev-Zel'dovich Effect?",
+        "answer": "This is a distortion of the Cosmic Microwave Background (CMB) photons as they pass through the hot gas in galaxy clusters. The hot electrons in the cluster scatter the CMB photons, creating a subtle change in the CMB temperature."
+      },
+      {
+        "question": "What are Gravitational Waves?",
+        "answer": "Ripples in the fabric of spacetime, predicted by Einstein's General Relativity, that are caused by cataclysmic events like the merger of black holes."
+      },
+      {
+        "question": "What is Neutrino Astronomy?",
+        "answer": "The study of the universe using neutrinos, which are subatomic particles with almost no mass and no electric charge. They travel unimpeded through space, carrying direct information from the cores of stars and supernovae."
+      },
+      {
+        "question": "What are Gamma-Ray Bursts (GRBs)?",
+        "answer": "The most powerful explosions in the universe since the Big Bang. They are thought to originate from the collapse of a massive star into a black hole or the merger of two neutron stars."
+      },
+      {
+        "question": "What are Pulsar Timing Arrays (PTAs)?",
+        "answer": "A method used to detect long-wavelength gravitational waves by precisely monitoring the arrival times of radio pulses from a network of pulsars."
+      },
+      {
+        "question": "What are Cosmic Rays?",
+        "answer": "High-energy protons and atomic nuclei that travel through space at nearly the speed of light. They are thought to be produced by violent astrophysical events like supernovae."
+      },
+      {
+        "question": "What is Magnetohydrodynamics (MHD)?",
+        "answer": "The study of the dynamics of electrically conducting fluids, such as plasmas in space, in the presence of magnetic fields. MHD is essential for understanding phenomena like accretion disks and stellar flares."
+      },
+      {
+        "question": "What is Spacetime Curvature?",
+        "answer": "In General Relativity, gravity is not a force but a manifestation of the curvature of spacetime. Massive objects warp the fabric of spacetime, and this curvature dictates the paths of objects, including light."
+      },
+      {
+        "question": "What is the Event Horizon Telescope (EHT)?",
+        "answer": "A network of radio telescopes that work together to form a virtual Earth-sized telescope. This project successfully captured the first-ever image of a black hole and its shadow, providing direct visual confirmation of Einstein's predictions."
+      }
+    ]
+  },
+  {
+    "category": "Stargazing Rules",
+    "qna_pairs": [
+      {
+        "question": "What is the most important rule for a beginner stargazer?",
+        "answer": "The single most important rule is to go to a dark location, as far away from city lights as possible."
+      },
+      {
+        "question": "Why is red light recommended for stargazing?",
+        "answer": "It takes 20-30 minutes for your eyes to fully adapt to the dark, and red light is the least disruptive to your night vision."
+      },
+      {
+        "question": "What is \"star hopping\"?",
+        "answer": "\"Star hopping\" is a key skill for intermediate stargazers where you use a star chart to find a familiar bright star or constellation and then \"hop\" to other, less visible objects nearby."
+      },
+      {
+        "question": "What is the purpose of a sturdy tripod for stargazing?",
+        "answer": "If you're using binoculars or a small telescope, a sturdy tripod is essential. It eliminates shaking and allows you to keep an object centered in your view for a longer time."
+      },
+      {
+        "question": "What is Polar Alignment for a telescope?",
+        "answer": "For advanced stargazing and astrophotography, you must accurately align your telescope's equatorial mount with the celestial pole. This allows the telescope to track celestial objects as the Earth rotates, keeping them perfectly in the eyepiece or camera frame during long exposures."
+      },
+      {
+        "question": "What is the rule for observing the Sun?",
+        "answer": "Never, under any circumstances, look directly at the Sun through a telescope or binoculars without a certified, purpose-built solar filter."
+      }
+    ]
+  },
+  {
+    "category": "Definitions",
+    "qna_pairs": [
+      {
+        "question": "What is Astronomy?",
+        "answer": "Astronomy is the scientific study of celestial objects (such as stars, planets, and galaxies), the universe as a whole, and the physical laws that govern them."
+      },
+      {
+        "question": "What is a Star?",
+        "answer": "A star is a massive celestial body made of a luminous ball of plasma, held together by its own gravity. It produces light and heat through nuclear fusion in its core."
+      },
+      {
+        "question": "What is a Planet?",
+        "answer": "A planet is a celestial body that orbits a star, is massive enough to be rounded by its own gravity, but is not massive enough to cause thermonuclear fusion, and has cleared its orbital neighborhood of other debris."
+      },
+      {
+        "question": "What is a Galaxy?",
+        "answer": "A galaxy is a massive system of stars, stellar remnants, interstellar gas, dust, and dark matter, all bound together by gravity."
+      },
+      {
+        "question": "What is a Nebula?",
+        "answer": "A nebula is a giant cloud of interstellar gas and dust, often the birthplace of stars. Nebulae can also be the remains of a dead star, such as a supernova remnant."
+      },
+      {
+        "question": "What is a Supernova?",
+        "answer": "A supernova is the final, powerful, and extremely bright explosion of a massive star as it reaches the end of its life, scattering stellar material into space."
+      },
+      {
+        "question": "What is a Black Hole?",
+        "answer": "A black hole is a region of spacetime where gravity is so strong that nothing—not even light—can escape. It is the result of the complete gravitational collapse of a massive star."
+      },
+      {
+        "question": "What is a Light-Year?",
+        "answer": "A light-year is a unit of distance, defined as the distance that light travels in a vacuum in one year, which is approximately 9.46 trillion kilometers."
+      },
+      {
+        "question": "What is an Orbit?",
+        "answer": "An orbit is the curved path of a celestial object or spacecraft around a star, planet, or moon, especially a periodic elliptical or circular path."
+      },
+      {
+        "question": "What is Gravity?",
+        "answer": "Gravity is the fundamental force of attraction that exists between all objects with mass or energy. It is responsible for holding galaxies together, keeping planets in orbit, and pulling matter into stars."
+      },
+      {
+        "question": "What is a Constellation?",
+        "answer": "A constellation is a group of stars that form a recognizable pattern or image in the night sky, often named after a mythological figure, animal, or object."
+      },
+      {
+        "question": "What is the Milky Way?",
+        "answer": "The Milky Way is the spiral galaxy that contains our Solar System. From Earth, it appears as a hazy band of light across the night sky."
+      },
+      {
+        "question": "What is an Exoplanet?",
+        "answer": "An exoplanet is a planet that orbits a star outside of our Solar System."
+      },
+      {
+        "question": "What is Redshift?",
+        "answer": "Redshift is the stretching of light to longer, redder wavelengths as a source of light moves away from an observer. In cosmology, it is a key piece of evidence for the expansion of the universe."
+      },
+      {
+        "question": "What is the Celestial Sphere?",
+        "answer": "The celestial sphere is an imaginary sphere of a very large radius, with Earth at its center, on which all celestial objects appear to be located. It is used as a tool for mapping the sky."
+      },
+      {
+        "question": "What is the Cosmic Microwave Background (CMB)?",
+        "answer": "The CMB is the faint, leftover thermal radiation from the Big Bang. It is the oldest light in the universe and provides crucial evidence for the Big Bang theory."
+      },
+      {
+        "question": "What is a Telescope?",
+        "answer": "A telescope is an optical instrument that uses an arrangement of lenses or mirrors to observe distant objects by collecting and focusing light and other electromagnetic radiation."
+      },
+      {
+        "question": "What is a Quasar?",
+        "answer": "A quasar is an extremely bright and distant celestial object, powered by a supermassive black hole at the center of a young galaxy."
+      },
+      {
+        "question": "What is Dark Matter?",
+        "answer": "Dark matter is a hypothetical form of matter that does not emit, absorb, or reflect light, making it impossible to detect directly. Its existence is inferred from its gravitational effects on visible matter in galaxies."
+      },
+      {
+        "question": "What is Astrophysics?",
+        "answer": "Astrophysics is a branch of astronomy that applies the principles of physics and chemistry to study celestial objects and phenomena, such as the composition, motion, and evolution of stars and galaxies."
+      }
+    ]
+  },
+  {
+    "category": "Anomalies",
+    "qna_pairs": [
+      {
+        "question": "What is the Dark Matter Problem?",
+        "answer": "The observed rotation speeds of galaxies and the dynamics of galaxy clusters suggest that there is a significant amount of unseen matter, known as dark matter, that we cannot detect with current methods."
+      },
+      {
+        "question": "What is the Dark Energy Problem?",
+        "answer": "Observations show that the expansion of the universe is accelerating. The unknown force responsible for this acceleration, called dark energy, makes up about 68% of the universe's total energy density."
+      },
+      {
+        "question": "What is the Flat Rotation Curves of Galaxies anomaly?",
+        "answer": "According to Newtonian physics, stars on the outer edges of a galaxy should orbit more slowly than stars closer to the center. However, observations show that stars and gas clouds orbit at roughly the same speed, a key piece of evidence for dark matter."
+      },
+      {
+        "question": "What is the Hubble Tension?",
+        "answer": "This is a major discrepancy between the value of the universe's expansion rate (H0) measured from the early universe and the value measured from the local, modern universe."
+      },
+      {
+        "question": "What is the \"Missing Baryons\" Problem?",
+        "answer": "Calculations suggest that about half of the \"normal\" matter (baryons) in the universe is missing from our observations of galaxies and galaxy clusters."
+      },
+      {
+        "question": "What is the Lithium Problem?",
+        "answer": "The amount of lithium predicted to have been created during the Big Bang is about three to four times higher than what we observe in the oldest stars."
+      },
+      {
+        "question": "What is the CMB Cold Spot?",
+        "answer": "This is a large, unusually cold region in the Cosmic Microwave Background that is significantly colder than the surrounding sky. Its origin is unexplained by the standard cosmological model."
+      },
+      {
+        "question": "What is the Pioneer Anomaly?",
+        "answer": "This was an observed deceleration of the Pioneer 10 and 11 spacecraft as they traveled out of the solar system, which was unexplained for years."
+      },
+      {
+        "question": "What is the Flyby Anomaly?",
+        "answer": "This is the unexplained change in the velocity of a spacecraft during a gravity assist flyby of Earth."
+      },
+      {
+        "question": "What is the Fermi Paradox?",
+        "answer": "This is the apparent contradiction between the high probability of extraterrestrial civilizations existing and the lack of evidence for them."
+      },
+      {
+        "question": "What are Fast Radio Bursts (FRBs)?",
+        "answer": "These are extremely powerful, millisecond-long bursts of radio waves from distant galaxies, but their cause is still unknown."
+      },
+      {
+        "question": "What is the Planet Nine Hypothesis?",
+        "answer": "The highly elliptical and clustered orbits of several distant objects in the Kuiper Belt suggest the existence of a yet-to-be-discovered ninth planet in our solar system."
+      },
+      {
+        "question": "What is the Asymmetry of Matter and Antimatter anomaly?",
+        "answer": "The Big Bang should have created equal amounts of matter and antimatter, but the observable universe is almost entirely made of matter. The process that led to this imbalance is not understood."
+      },
+      {
+        "question": "What is the \"Great Attractor\"?",
+        "answer": "A diffuse, massive region of space that appears to be pulling the Milky Way and surrounding galaxies toward it with immense gravitational force, suggesting an unknown concentration of mass."
+      },
+      {
+        "question": "What is the anomaly of Massive Galaxies in the Early Universe?",
+        "answer": "The discovery of surprisingly massive and mature galaxies just a few hundred million years after the Big Bang challenges our current models of galaxy formation and evolution."
+      },
+      {
+        "question": "What was anomalous about Oumuamua's Trajectory?",
+        "answer": "The first interstellar object detected, 'Oumuamua' had an acceleration that could not be explained by gravity alone, leading to speculation about its composition and origin."
+      },
+      {
+        "question": "What is the Coronal Heating Problem?",
+        "answer": "The Sun's corona is millions of degrees hotter than its surface, which defies the laws of thermodynamics. The exact mechanism for this heating is still a subject of research."
+      },
+      {
+        "question": "What is the anomaly of the Rotation of Uranus?",
+        "answer": "Uranus is tilted on its side, rotating at a 98-degree angle to its orbital plane. The most likely explanation is a massive collision early in its history, but the precise details remain an anomaly."
+      },
+      {
+        "question": "What is the Missing Satellites Problem?",
+        "answer": "Cosmological simulations predict that dwarf galaxies should exist in far greater numbers orbiting large galaxies like the Milky Way than what we actually observe."
+      },
+      {
+        "question": "What is the Age of the Universe anomaly?",
+        "answer": "While the age of the universe is generally accepted to be 13.8 billion years, there are some stars and galaxies that appear to be older than this, creating a conflict with current models."
+      }
+    ]
+  },
+  {
+    "category": "Astronomical Formulas",
+    "qna_pairs": [
+      {
+        "question": "What is the formula for Newton's Law of Universal Gravitation?",
+        "answer": "F = G * (m1 * m2) / r^2 where F is the gravitational force, G is the gravitational constant, m1 and m2 are the masses, and r is the distance between them."
+      },
+      {
+        "question": "What is the formula for Kepler's Third Law?",
+        "answer": "P^2 = (4 * pi^2) / (G * (m1 + m2)) * a^3 where P is the orbital period, a is the semi-major axis, G is the gravitational constant, and m1, m2 are the masses."
+      },
+      {
+        "question": "What is the formula for Orbital Velocity?",
+        "answer": "v = sqrt(GM / r) where v is the orbital velocity, G is the gravitational constant, M is the mass of the central body, and r is the orbital radius."
+      },
+      {
+        "question": "What is the formula for Escape Velocity?",
+        "answer": "v_e = sqrt(2GM / r) where v_e is the escape velocity, G is the gravitational constant, M is the mass of the central body, and r is the radius."
+      },
+      {
+        "question": "What is the formula for the Orbital Period of a circular orbit?",
+        "answer": "P = 2 * pi * sqrt(a^3 / GM) where P is the orbital period, a is the semi-major axis, G is the gravitational constant, and M is the central mass."
+      },
+      {
+        "question": "What is the formula for Tidal Force?",
+        "answer": "F_T = (2 * G * m1 * m2 * r1) / d^3 where F_T is the tidal force, m1, m2, and G are as above, r1 is the radius of the smaller body, and d is the distance between the bodies."
+      },
+      {
+        "question": "What is the formula for the Stefan-Boltzmann Law?",
+        "answer": "L = 4 * pi * R^2 * sigma * T^4 where L is luminosity, R is the radius, sigma is the Stefan-Boltzmann constant, and T is the surface temperature."
+      },
+      {
+        "question": "What is the formula for Wien's Displacement Law?",
+        "answer": "lambda_max = b / T where lambda_max is the peak wavelength, b is Wien's displacement constant, and T is the temperature."
+      },
+      {
+        "question": "What is the formula for the Mass-Luminosity Relation?",
+        "answer": "L is proportional to M^3.5 where L is luminosity and M is the star's mass."
+      },
+      {
+        "question": "What is the formula for Hydrostatic Equilibrium?",
+        "answer": "dP / dr = -rho(r) * g(r) where dP/dr is the pressure change with radius, rho(r) is the density, and g(r) is gravitational acceleration."
+      },
+      {
+        "question": "What is the formula for the Schwarzschild Radius?",
+        "answer": "R_S = 2GM / c^2 where R_S is the radius of the event horizon, G is the gravitational constant, M is the black hole's mass, and c is the speed of light."
+      },
+      {
+        "question": "What is the formula for the Jeans Instability Criterion?",
+        "answer": "M_J is approximately ((5 * k_B * T) / (G * mu * m_H))^(3/2) * (3 / (4 * pi * rho))^(1/2) where M_J is the Jeans Mass (minimum mass for collapse), k_B is the Boltzmann constant, T is temperature, G is the gravitational constant, mu is the mean molecular weight, m_H is the mass of a hydrogen atom, and rho is density."
+      },
+      {
+        "question": "What is the formula for the Eddington Luminosity?",
+        "answer": "L_Edd = (4 * pi * G * M * m_p * c) / sigma_T where L_Edd is the maximum luminosity before radiation pushes matter away, M is the mass, m_p is proton mass, and sigma_T is the Thomson scattering cross-section."
+      },
+      {
+        "question": "What is the formula for Hubble's Law?",
+        "answer": "v = H_0 * d where v is the recession velocity, H_0 is the Hubble constant, and d is the distance."
+      },
+      {
+        "question": "What is the formula for Critical Density?",
+        "answer": "rho_c = (3 * H_0^2) / (8 * pi * G) where rho_c is the critical density, H_0 is the Hubble constant, and G is the gravitational constant."
+      },
+      {
+        "question": "What is the formula for Cosmological Redshift?",
+        "answer": "z = (lambda_observed - lambda_emitted) / lambda_emitted where z is redshift, and lambda is wavelength."
+      },
+      {
+        "question": "What is the simplified formula for the Age of the Universe?",
+        "answer": "t_0 is approximately 1 / H_0 where t_0 is the approximate age and H_0 is the Hubble constant."
+      },
+      {
+        "question": "What is the formula for the Friedmann Equation?",
+        "answer": "(a_dot / a)^2 = (8 * pi * G * rho) / 3 - (k * c^2) / a^2 where a is the scale factor, a_dot is its rate of change, rho is the energy density, k is the curvature parameter, G is the gravitational constant, and c is the speed of light."
+      },
+      {
+        "question": "What is the formula for the Inverse-Square Law of Light?",
+        "answer": "F = L / (4 * pi * d^2) where F is apparent brightness, L is luminosity, and d is distance."
+      },
+      {
+        "question": "What is the formula for Photon Energy?",
+        "answer": "E = h * f = (h * c) / lambda where E is energy, h is Planck's constant, f is frequency, c is speed of light, and lambda is wavelength."
+      },
+      {
+        "question": "What is the formula for the Doppler Effect for Light?",
+        "answer": "delta_lambda / lambda_0 is approximately v / c where delta_lambda is the change in wavelength, lambda_0 is the original wavelength, v is the relative velocity, and c is the speed of light."
+      },
+      {
+        "question": "What is the formula for the Relativistic Doppler Effect?",
+        "answer": "z + 1 = lambda_observed / lambda_emitted = sqrt((1 + v/c) / (1 - v/c)) where z is redshift, lambda is wavelength, v is relative velocity, and c is speed of light."
+      },
+      {
+        "question": "What is the formula for Magnification in a Telescope?",
+        "answer": "M = f_o / f_e where M is magnification, f_o is the focal length of the objective lens, and f_e is the focal length of the eyepiece."
+      },
+      {
+        "question": "What is the formula for the Diffraction Limit (Rayleigh Criterion)?",
+        "answer": "theta = 1.22 * (lambda / D) where theta is the minimum angular separation, lambda is the wavelength, and D is the diameter of the objective."
+      },
+      {
+        "question": "What is the formula for the Mass-Energy Equivalence?",
+        "answer": "E = m * c^2 where E is energy, m is mass, and c is the speed of light."
+      },
+      {
+        "question": "What is the formula for the Chandrasekhar Limit?",
+        "answer": "M_limit = 1.44 * M_Sun where M_limit is the max mass of a white dwarf star, and M_Sun is the mass of the Sun."
+      },
+      {
+        "question": "What is the formula for the Tully-Fisher Relation?",
+        "answer": "L is proportional to v_max^4 where L is luminosity and v_max is maximum rotation speed."
+      },
+      {
+        "question": "What is the formula for the Faber-Jackson Relation?",
+        "answer": "L is proportional to sigma^4 where L is luminosity and sigma is stellar velocity dispersion."
+      },
+      {
+        "question": "What is the formula for the Roche Limit?",
+        "answer": "d is approximately 2.44 * R_p * (rho_p / rho_s)^(1/3) where d is the Roche limit, R_p and rho_p are the radius and density of the primary body, and rho_s is the density of the satellite."
+      },
+      {
+        "question": "What is the formula for the Drake Equation?",
+        "answer": "N = R* * f_p * n_e * f_l * f_i * f_c * L where N is the number of detectable civilizations, and the other variables represent various probabilities and factors related to star formation, planets, and the development of intelligent life."
+      }
+    ]
+  }
+]
+
